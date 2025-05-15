@@ -1,8 +1,9 @@
 import Menu from "@/components/Menu"
+import Navbar from "@/components/Navbar"
 import Image from "next/image"
 import Link from "next/link"
 
-const DashboardLayout = () => {
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="h-full flex">
       {/* LEFT */}
@@ -15,7 +16,10 @@ const DashboardLayout = () => {
       </div>
 
       {/* RIGHT */}
-      <div className="bg-[#F7F8FA] w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] overflow-scroll">r</div>
+      <div className="bg-[#F7F8FA] w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] overflow-scroll">
+        <Navbar />
+        { children }
+      </div>
     </main>
   )
 }
