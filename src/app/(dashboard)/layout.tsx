@@ -5,9 +5,9 @@ import Link from "next/link"
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="h-full flex">
+    <main className="h-screen flex">
       {/* LEFT */}
-      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
+      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4 overflow-y-auto">
         <Link href='/' className="flex items-center justify-center lg:justify-start gap-2">
           <Image src='/logo.png' alt={'logo'} width={34} height={34} />
           <span className="hidden lg:block text-2xl text-gray-600">School</span>
