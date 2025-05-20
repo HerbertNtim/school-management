@@ -1,4 +1,5 @@
 import Pagination from '@/components/Pagination'
+import Table from '@/components/Table'
 import TableSearch from '@/components/TableSearch'
 import Image from 'next/image'
 import React from 'react'
@@ -15,6 +16,42 @@ const buttonList = [
   {
     name: "sort",
     icon: '/sort.png'
+  }
+]
+
+const teachersColumns = [
+  {
+    header: 'Info',
+    accessor: 'info',
+  },
+  {
+    header: 'Teacher ID',
+    accessor: 'teacherId',
+    className: 'hidden md:table-cell'
+  },
+  {
+    header: 'Subjects',
+    accessor: 'subjects',
+    className: 'hidden md:table-cell'
+  },
+  {
+    header: 'Classes',
+    accessor: 'classes',
+    className: 'hidden md:table-cell'
+  },
+  {
+    header: 'Phone',
+    accessor: 'phone',
+    className: 'hidden md:table-cell'
+  },
+  {
+    header: 'Address',
+    accessor: 'address',
+    className: 'hidden md:table-cell'
+  },
+  {
+    header: 'Actions',
+    accessor: 'actions',
   }
 ]
 
@@ -36,7 +73,7 @@ const TeachersList = () => {
         </div>
       </div>
       {/* LIST */}
-      <div></div>
+      <Table columns={teachersColumns} />
       {/* PAGINATION */}
       <Pagination />
     </div>
