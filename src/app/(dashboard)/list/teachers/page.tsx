@@ -1,3 +1,4 @@
+import Pagination from '@/components/Pagination'
 import TableSearch from '@/components/TableSearch'
 import Image from 'next/image'
 import React from 'react'
@@ -6,6 +7,14 @@ const buttonList = [
   {
     name: 'Add Teacher',
     icon: '/plus.png'
+  },
+  {
+    name: 'Filter',
+    icon: '/filter.png'
+  },
+  {
+    name: "sort",
+    icon: '/sort.png'
   }
 ]
 
@@ -29,7 +38,7 @@ const TeachersList = () => {
       {/* LIST */}
       <div></div>
       {/* PAGINATION */}
-      <div></div>
+      <Pagination />
     </div>
   )
 }
