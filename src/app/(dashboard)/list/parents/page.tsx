@@ -30,7 +30,7 @@ const buttonList = [
   }
 ]
 
-const teachersColumns = [
+const parentsColumns = [
   {
     header: 'Info',
     accessor: 'info',
@@ -102,7 +102,7 @@ const ParentsList = () => {
         </div>
       </div>
       {/* LIST */}
-      <Table columns={teachersColumns} renderRow={renderRow} data={parentsData} />
+      <Table columns={parentsColumns} renderRow={renderRow} data={parentsData} />
       {/* PAGINATION */}
       <Pagination />
     </div>
